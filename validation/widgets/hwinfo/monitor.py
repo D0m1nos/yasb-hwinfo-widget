@@ -21,7 +21,7 @@ VALIDATION_SCHEMA = {
     'update_interval': {
         'type': 'integer',
         'default': DEFAULTS['update_interval'],
-        'min': 2000,
+        'min': 1,
         'max': 60000
     },
     'index': {
