@@ -28,7 +28,7 @@ At the end of your `config.yaml` file add the following:
       label_alt: "{info[sensor]} | {info[label]} | {info[value]} | {info[valueRaw]}"
         # ^ The alternate format label for the widget. Accepts: string
       update_interval: 2000 # How frequently it reads the values from registry (in milliseconds). Accepts: positive integer between 1 and 60000
-      index: 3 # The index assigned to the sensor, you can check it by executing the following command in a command prompt: reg query HKEY_CURRENT_USER\SOFTWARE\HWiNFO64\VSB. Accepts: positive integer between 0 and 10000. Required field.
+      index: 3 # The index assigned to the sensor, you can check it by executing the following command in a command prompt: reg query HKEY_CURRENT_USER\SOFTWARE\HWiNFO64\VSB Accepts: positive integer between 0 and 10000. Required field.
       class_name: "GPU_temp" # The CSS class name of the custom widget. Accepts: string. Required field.
       callbacks:
         on_left: "toggle_label" # Toggles between 'label' and 'label_alt'
@@ -41,7 +41,9 @@ Finally add the widget in your bar:
 ```yaml
   bars:
     yasb-bar:
+      # ...
       widgets:
+        # ...
         right: ["gpu_temperature"]
 ```
 
@@ -59,6 +61,8 @@ It is possible to style the label of the widget in the `styles.css` file.
 ```
 
 ## Example
+
+### Final Result
 
 ![Example Cpu temperature widget](img/Cpu_temp.png)
 
